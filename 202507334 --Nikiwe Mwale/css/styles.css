@@ -1,0 +1,653 @@
+/* =================================
+   NIKIWE'S PERSONAL WEBSITE
+   Theme: Dark Blue and Silver
+================================= */
+
+/* Website colours */
+
+:root {
+    --dark-blue: #071426;
+    --medium-blue: #102743;
+    --silver: #c8d1de;
+    --light-silver: #eef2f7;
+    --white: #ffffff;
+    --text-muted: #b7c4d8;
+}
+
+/* Basic page settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Navigation bar */
+
+header {
+    background-color: #0b1d33;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #52657c;
+}
+
+.logo {
+    color: var(--silver);
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Home section */
+
+.hero {
+    min-height: 570px;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #183b60 0,
+            transparent 40%
+        ),
+        var(--dark-blue);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    color: var(--silver);
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--silver);
+}
+
+.hero h3 {
+    color: #a9c5e6;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.small-title) {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--silver);
+    color: var(--dark-blue);
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Profile photograph */
+
+.profile {
+    width: 300px;
+    height: 360px;
+    flex-shrink: 0;
+    padding: 8px;
+    border: 2px solid var(--silver);
+    border-radius: 150px 150px 20px 20px;
+    background-color: #152e49;
+    box-shadow: 0 0 35px #7d9fc733;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
+
+/* General section styling */
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--silver);
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.section > p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    color: var(--text-muted);
+}
+
+/* Hobbies and learning cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: linear-gradient(
+        145deg,
+        #122b47,
+        #0b1b30
+    );
+    border: 1px solid #52657c;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+    min-width: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--silver);
+    box-shadow: 0 10px 30px #00000030;
+}
+
+.card h3 {
+    color: var(--silver);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Learning table */
+
+table {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--medium-blue);
+}
+
+th,
+td {
+    border: 1px solid #657990;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--silver);
+    color: var(--dark-blue);
+}
+
+td {
+    color: var(--light-silver);
+}
+
+/* Photo gallery */
+
+.gallery-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+/* Video */
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 450px;
+    margin: 30px auto;
+    background-color: #000000;
+    border: 2px solid var(--silver);
+    border-radius: 10px;
+}
+
+/* Contact form */
+
+form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    padding: 30px;
+    text-align: left;
+    background-color: var(--medium-blue);
+    border: 1px solid #52657c;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: var(--silver);
+    font-weight: bold;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8191a6;
+    border-radius: 5px;
+    background-color: #071426;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #a9c5e6;
+    border-color: transparent;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--silver);
+    color: var(--dark-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ffffff;
+}
+
+#formFeedback {
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #040c17;
+    border-top: 1px solid #52657c;
+}
+
+footer p {
+    color: var(--silver);
+    font-size: 13px;
+    margin: 5px;
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #a9c5e6;
+    outline-offset: 4px;
+}
+
+/* Responsive design for phones and tablets */
+
+@media (max-width: 850px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .profile {
+        width: 250px;
+        height: 300px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .gallery-image {
+        height: auto;
+    }
+}
+/* Light theme */
+body.light-theme {
+    background-color: #eef2f7;
+    color: #071426;
+}
+
+body.light-theme header,
+body.light-theme footer {
+    background-color: #d5deea;
+    color: #071426;
+}
+
+body.light-theme section,
+body.light-theme .hobby-card {
+    background-color: #ffffff;
+    color: #071426;
+}
+
+/* Theme button */
+#themeToggle {
+    padding: 10px 16px;
+    border: 1px solid #c8d1de;
+    border-radius: 8px;
+    background-color: #102743;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #294969;
+}
+/* My Projects Section */
+.projects-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #102743;
+    color: #eef2f7;
+    border: 1px solid #c8d1de;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card h3 {
+    color: #c8d1de;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+.project-card span {
+    display: block;
+    margin-top: 15px;
+    color: #c8d1de;
+    font-size: 0.9rem;
+}
+/* Interactive Photo Gallery */
+.gallery-viewer {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #102743;
+    border: 1px solid #c8d1de;
+    border-radius: 15px;
+}
+
+#galleryImage {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#galleryCaption {
+    color: #eef2f7;
+    margin: 15px 0;
+}
+
+.gallery-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-buttons button {
+    padding: 12px 22px;
+    background-color: #c8d1de;
+    color: #071426;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.gallery-buttons button:hover {
+    background-color: #ffffff;
+}
+
+.gallery-buttons button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+/* =========================
+   DARK AND LIGHT MODE
+========================= */
+
+/* Default dark-blue theme */
+body {
+    background-color: #071426;
+    color: #eef2f7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme */
+body.light-theme {
+    background-color: #eef2f7;
+    color: #071426;
+}
+
+/* Sections in light mode */
+body.light-theme section {
+    color: #071426;
+}
+
+/* Cards in light mode */
+body.light-theme .hobby-card,
+body.light-theme .project-card,
+body.light-theme .skill-card {
+    background-color: #ffffff;
+    color: #071426;
+    border-color: #c8d1de;
+}
+
+/* Headings in light mode */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3 {
+    color: #102743;
+}
+
+/* Navigation in light mode */
+body.light-theme nav a {
+    color: #071426;
+}
+
+/* Theme button */
+#themeToggle {
+    padding: 12px 20px;
+    background-color: #c8d1de;
+    color: #071426;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #ffffff;
+}
+
+/* Keyboard accessibility */
+#themeToggle:focus-visible {
+    outline: 3px solid #6da9ff;
+    outline-offset: 3px;
+}
+/* LIGHT MODE FIX */
+
+body.light-theme {
+    background-color: #eef2f7 !important;
+    color: #071426 !important;
+}
+
+body.light-theme header,
+body.light-theme footer,
+body.light-theme section,
+body.light-theme .hobby-card,
+body.light-theme .project-card,
+body.light-theme .skill-card {
+    background-color: #ffffff !important;
+    color: #071426 !important;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme p,
+body.light-theme label {
+    color: #071426 !important;
+}
+
+body.light-theme nav a {
+    color: #071426 !important;
+}
+
+body.light-theme input,
+body.light-theme textarea {
+    background-color: #ffffff;
+    color: #071426;
+    border: 1px solid #102743;
+}
+
+#themeToggle {
+    padding: 12px 20px;
+    background-color: #c8d1de;
+    color: #071426;
+    border: 1px solid #102743;
+    border-radius: 8px;
+    cursor: pointer;
+}
